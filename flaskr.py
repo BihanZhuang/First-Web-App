@@ -18,5 +18,5 @@ app.config.from_envvar('FLASK_SETTINGS', silent=True)
 
 def connect_bd():
     rv = sqlite3.connect(app.config['DATABASE'])
-    rv.row_factory = sqlite3.row_factory
+    rv.row_factory = sqlite3.Row
     return rv
